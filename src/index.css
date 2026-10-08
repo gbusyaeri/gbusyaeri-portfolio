@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B0B0D;
+  --color-surface: #161618;
+  --color-textPrimary: #F5F5F2;
+  --color-textSecondary: #A6A6AA;
+  --color-accent: #ED3B3B;
+  
+  --font-outfit: 'Outfit', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-textPrimary);
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+@keyframes custom-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-custom-blink {
+  animation: custom-blink 1s step-end infinite;
+}

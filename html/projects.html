@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo-gb.ico">
+    <title>Gunawan Busyaeri - Portfolio | Projects</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0B0B0D',
+                        surface: '#161618',
+                        textPrimary: '#F5F5F2',
+                        textSecondary: '#A6A6AA',
+                        accent: '#ED3B3B'
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.textPrimary');
+            font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-textPrimary relative min-h-screen flex flex-col selection:bg-accent/30 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl backdrop-blur-md bg-white/10 border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
+        <a href="index.html" class="flex items-center transition-transform hover:scale-105 duration-300">
+            <img src="assets/img/logo-gb.png" alt="GB Logo" class="h-8 w-auto rounded-sm">
+        </a>
+        
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Home</a>
+            <a href="achievements.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Achievements</a>
+            <a href="projects.html" class="text-textPrimary transition-colors duration-300">Projects</a>
+            <a href="experiences.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Experiences</a>
+            <a href="about.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">About</a>
+        </div>
+
+        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-red-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors duration-300 shadow-md shadow-accent/20 hidden md:inline-flex">
+            Get In Touch
+        </a>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-textPrimary p-2 z-50 focus:outline-none">
+            <i class="ph ph-list text-2xl" id="menu-icon"></i>
+        </button>
+</nav>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center gap-6 text-lg font-medium transition-all duration-300 opacity-0 pointer-events-none z-40">
+
+            <a href="index.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Home</a>
+            <a href="achievements.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Achievements</a>
+            <a href="projects.html" class="text-accent text-xl font-bold transition-colors block py-2 duration-300">Projects</a>
+            <a href="experiences.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Experiences</a>
+            <a href="about.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">About</a>
+        
+        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+            class="bg-accent hover:bg-red-600 text-white px-8 py-3 rounded-full text-base font-medium transition-colors duration-300 shadow-md shadow-accent/20 mt-4">
+            Get In Touch
+        </a>
+    </div>
+
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col gap-10">
+        
+        <!-- Projects Section -->
+        <section class="flex flex-col gap-10">
+            <div class="flex items-center justify-between">
+                <h2 class="text-3xl md:text-4xl font-bold font-outfit">All Projects</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project: Rusunawa -->
+                <a href="https://drive.google.com/file/d/1Txet3m15Sc3_zd5ZeZUDmLxJGFepeSn0/view" target="_blank" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/rusunawa.jpeg" alt="Rusunawa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-ghost text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Rusunawa: Mimpi Edition</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">An atmospheric horror and puzzle game where players are trapped in a nightmare controlled by a child spirit. Navigate a tense, labyrinthine haunted apartment complex in the dark to find the single door that leads to survival.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                Explore Case <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Karaventure -->
+                <div class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/karaventure.png" alt="Karaventure" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-game-controller text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Karaventure</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">A Roblox and AI-powered platform bringing Karawang's cultural heritage to life through interactive virtual learning.</p>
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <a href="https://senior-robina-himarpl-f0a49bc9.koyeb.app/" target="_blank" class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300 hover:underline">
+                                Karaventure Website <i class="ph ph-arrow-right"></i>
+                            </a>
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                Karaventure Roblox <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Semprong Ceria -->
+                <a href="#" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/semprong.png" alt="Semprong Ceria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-storefront text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Semprong Ceria</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">A heartwarming slice-of-life business simulator. Guide Asep, an ambitious high school graduate from a humble family, as he manages a roadside shop to achieve his dream of becoming a master semprong entrepreneur.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                Explore Case <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Leumpang -->
+                <a href="#" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/leumpang.jpeg" alt="Leumpang" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-sneaker text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Leumpang (In Development)</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">An innovative Roblox experience recreating Karawang's Singaperbangsa Stadium. This ongoing project bridges physical fitness and the metaverse by seamlessly integrating real-world sports tracking with virtual gameplay.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                View Project <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Seblak Cihuyy -->
+                <a href="#" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/seblak.png" alt="Seblak Cihuyy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-fire text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Seblak Cihuyy</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">A fast-paced time-management game celebrating Indonesian street food culture. Players are challenged to run a bustling Seblak stall, mastering complex customer orders and extreme spice levels under pressure.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                Explore Case <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Sorai -->
+                <a href="#" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/sorai.jpg" alt="Sorai" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-coffee text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Sorai (In Development)</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">Inspired by titles like Coffee Talk, Sorai is a cozy visual novel that celebrates local Indonesian culture. Players step into the role of a traditional stall owner, conversing with patrons and influencing their personal storylines exclusively through the art of customizing and cooking the perfect surabi.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                View Project <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Brewek -->
+                <a href="https://www.roblox.com/games/90229198050659/Brewek" target="_blank" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/brewek.png" alt="Brewek" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-cards text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Brewek</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">A digital simulator that brings a beloved local card game to the virtual space. Engineered with realistic card physics, real-time matchmaking, and authentic mechanics to preserve the traditional tabletop experience online.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                View Project <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Kangru (Akang Guru) -->
+                <a href="#" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/kangru.jpeg" alt="Kangru (Akang Guru)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-briefcase text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Kangru (Akang Guru)</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">An AI-powered career mapping application tailored to MBTI personality profiles. The platform empowers students and fresh graduates by aligning their unique psychological traits with optimized industry pathways and personalized mentorship.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                View Project <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project: Karawang Voice Map -->
+                <a href="https://www.roblox.com/share?code=a42ca2e5b3e36d48b16a1b91db2dce1b&type=ExperienceDetails&stamp=1790562198126" target="_blank" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/kv.png" alt="Karawang Voice Map" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-map-pin text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Karawang Voice Map</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">Interactive audio map of local culture and stories.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 mt-4">
+                            <div class="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                View Project <i class="ph ph-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-10 mt-auto border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-textSecondary text-sm">© 2026 Gunawan Busyaeri. Built with empathy and code.</p>
+            <div class="flex items-center gap-4 text-2xl text-textSecondary">
+                <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="https://github.com/gbusyaeri" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-github-logo"></i></a>
+                <a href="https://www.instagram.com/gbusyaeri/" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-instagram-logo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if(btn && menu && icon) {
+                btn.addEventListener('click', () => {
+                    const isOpen = menu.classList.contains('opacity-100');
+                    if (isOpen) {
+                        menu.classList.remove('opacity-100', 'pointer-events-auto');
+                        menu.classList.add('opacity-0', 'pointer-events-none');
+                        icon.classList.remove('ph-x');
+                        icon.classList.add('ph-list');
+                        document.body.style.overflow = '';
+                    } else {
+                        menu.classList.remove('opacity-0', 'pointer-events-none');
+                        menu.classList.add('opacity-100', 'pointer-events-auto');
+                        icon.classList.remove('ph-list');
+                        icon.classList.add('ph-x');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

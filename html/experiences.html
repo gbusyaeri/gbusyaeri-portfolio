@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo-gb.ico">
+    <title>Gunawan Busyaeri - Portfolio | Experiences</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0B0B0D',
+                        surface: '#161618',
+                        textPrimary: '#F5F5F2',
+                        textSecondary: '#A6A6AA',
+                        accent: '#ED3B3B'
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.textPrimary');
+            font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-textPrimary relative min-h-screen flex flex-col selection:bg-accent/30 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl backdrop-blur-md bg-white/10 border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
+        <a href="index.html" class="flex items-center transition-transform hover:scale-105 duration-300">
+            <img src="assets/img/logo-gb.png" alt="GB Logo" class="h-8 w-auto rounded-sm">
+        </a>
+        
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Home</a>
+            <a href="achievements.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Achievements</a>
+            <a href="projects.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Projects</a>
+            <a href="experiences.html" class="text-textPrimary transition-colors duration-300">Experiences</a>
+            <a href="about.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">About</a>
+        </div>
+
+        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-red-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors duration-300 shadow-md shadow-accent/20 hidden md:inline-flex">
+            Get In Touch
+        </a>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-textPrimary p-2 z-50 focus:outline-none">
+            <i class="ph ph-list text-2xl" id="menu-icon"></i>
+        </button>
+</nav>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center gap-6 text-lg font-medium transition-all duration-300 opacity-0 pointer-events-none z-40">
+
+            <a href="index.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Home</a>
+            <a href="achievements.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Achievements</a>
+            <a href="projects.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Projects</a>
+            <a href="experiences.html" class="text-accent text-xl font-bold transition-colors block py-2 duration-300">Experiences</a>
+            <a href="about.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">About</a>
+        
+        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+            class="bg-accent hover:bg-red-600 text-white px-8 py-3 rounded-full text-base font-medium transition-colors duration-300 shadow-md shadow-accent/20 mt-4">
+            Get In Touch
+        </a>
+    </div>
+
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col gap-10">
+        <!-- Header Context -->
+        <div class="flex flex-col gap-4 mb-4">
+            <h2 class="text-3xl md:text-5xl font-bold font-outfit">Experience & Leadership</h2>
+            <p class="text-textSecondary text-lg leading-relaxed max-w-3xl">I believe the best way to understand technology is to build it, and the best way to master it is to teach it. Here is a look at my professional journey across software development, educational leadership, and global tech initiatives.</p>
+        </div>
+        
+        <div class="flex flex-col gap-16 md:gap-20">
+
+            <!-- Section: Education -->
+            <section class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center text-accent shadow-lg shadow-accent/5">
+                        <i class="ph ph-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-outfit text-white">Education</h3>
+                </div>
+                
+                <div class="relative border-l-2 border-white/10 ml-6 pl-8 md:pl-12 flex flex-col gap-10">
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Post-Graduate Teacher Certification Program, Software and Game Development Specialization</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-student"></i> Universitas Negeri Surabaya, Surabaya, Indonesia
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    Jul 2025 - Dec 2025
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Designed 8+ project-based lesson plans and modular curricula, achieving 95% student engagement in microteaching sessions.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Co-created UI/UX assessment rubrics with peer educators through agile feedback cycles, improving evaluation quality by 40% based on mentor metrics.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Bachelor's Degree, Computer Science Education</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-student"></i> Universitas Pendidikan Indonesia, Bandung, Indonesia
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    Sep 2013 - Dec 2017
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Designed and delivered 15+ project-based lesson plans (algorithms, object-oriented programming, UI/UX) during field teaching practice at SMK Pasundan 1 Bandung, achieving 94% average student competency mastery.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Led a 12-member community service team (KKN Posdaya Pagerwangi) that established a waste bank and cultivated 1,000 family medicinal plants, benefiting 120+ households.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Developed interactive learning media as a contributor to the ClubInk Graphic Design Society.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">GPA: 3.48/4.00</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Education & Technical Leadership -->
+            <section class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center text-accent shadow-lg shadow-accent/5">
+                        <i class="ph ph-chalkboard-teacher text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-outfit text-white">Education & Technical Leadership</h3>
+                </div>
+                
+                <div class="relative border-l-2 border-white/10 ml-6 pl-8 md:pl-12 flex flex-col gap-10">
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Head of Software Engineering & Educator</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-buildings"></i> SMKN 1 Karawang
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-xs font-semibold tracking-wide text-accent whitespace-nowrap self-start">
+                                    Sep 2020 – Present
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Redesigned the vocational curriculum to integrate UI/UX design, IoT, and game development, driving a 65% increase in national competition participation.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Managed departmental operations for 500+ students and launched innovation programs that yielded 15 national awards and 30+ industry internships.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Technology Mentor & Developer</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-users-three"></i> REEPAL Club
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-xs font-semibold tracking-wide text-accent whitespace-nowrap self-start">
+                                    Sep 2020 – Present
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Guided 40+ students in full-stack development, deploying an e-voting system adopted by 2,500+ users with 99% uptime.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Established an agile prototyping framework that produced 3 national hackathon finalist teams.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Curriculum Strategist</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-books"></i> MGMP Rekayasa Perangkat Lunak
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    Sep 2020 – 2025
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Spearheaded curriculum mapping with 12 educators, creating a unified teaching framework implemented across 30+ regional schools.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Global Tech Initiatives & AI Integration -->
+            <section class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center text-accent shadow-lg shadow-accent/5">
+                        <i class="ph ph-planet text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-outfit text-white">Global Tech Initiatives & AI Integration</h3>
+                </div>
+                
+                <div class="relative border-l-2 border-white/10 ml-6 pl-8 md:pl-12 flex flex-col gap-10">
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Think Big Space Coordinator & Keynote</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-cloud"></i> Amazon Web Services (AWS)
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-xs font-semibold tracking-wide text-accent whitespace-nowrap self-start">
+                                    Oct 2024 – Present
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Manage ASEAN's first AWS-powered Think Big Space Lab, guiding 50+ students through AWS Cloud Practitioner certification pathways.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Delivered technical keynote demonstrations of student cloud projects to AWS global leadership and international delegates.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">AI App Development Lead</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-trophy"></i> Guinness World Records
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    Oct 2025
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Directed 50 students to develop 150+ functional applications within 8 hours using AI coding assistants, securing a world record and elevating national visibility for AI education.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Program Lead & Mentor</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-graduation-cap"></i> AI Ready for ASEAN & Sekolah Gen AI
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    Nov 2025 – Jan 2026
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Facilitated AWS-backed AI literacy training for 40 educators and 500+ students, achieving a 98% completion rate.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Coached top-performing "Gen AI Champions," securing their placements in edtech product development internships.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Industry Collaboration & Event Management -->
+            <section class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center text-accent shadow-lg shadow-accent/5">
+                        <i class="ph ph-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-outfit text-white">Industry Collaboration & Event Management</h3>
+                </div>
+                
+                <div class="relative border-l-2 border-white/10 ml-6 pl-8 md:pl-12 flex flex-col gap-10">
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Tech Exhibitor & E-commerce Lead</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-storefront"></i> ATIKAN Jabar & Lazada
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    2023 – 2025
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Led live technical demonstrations of IoT and ERP systems to government officials, securing direct industry partnerships.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Orchestrated a marketplace showcase, equipping 45 students with hands-on e-commerce and digital marketing experience.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Chair of the Organizing Committee</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-medal"></i> LKS, Industrial Visits & Campus Leagues
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    2022 – 2024
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Spearheaded Indonesia’s first vocational-edutainment hybrid program, integrating academic immersion with game industry exposure (Agate International, ITB).</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Orchestrated regional tech competitions, e-sports leagues, and industrial visits for 300+ participants with zero logistical disruptions.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Early Career: Operations & Data Management -->
+            <section class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex items-center justify-center text-accent shadow-lg shadow-accent/5">
+                        <i class="ph ph-database text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-outfit text-white">Early Career: Operations & Data Management</h3>
+                </div>
+                
+                <div class="relative border-l-2 border-white/10 ml-6 pl-8 md:pl-12 flex flex-col gap-10">
+                    <!-- Role -->
+                    <div class="relative group">
+                        <div class="absolute w-4 h-4 rounded-full bg-background border-2 border-accent -left-[41px] md:-left-[57px] top-6 group-hover:bg-accent group-hover:shadow-[0_0_10px_rgba(237,59,59,0.5)] transition-all duration-300"></div>
+                        <div class="bg-surface rounded-3xl p-6 md:p-8 border border-white/5 hover:border-white/20 hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                                <div>
+                                    <h4 class="text-xl font-bold font-outfit text-textPrimary mb-1">Financial Administration & Invoicing</h4>
+                                    <p class="text-accent font-medium flex items-center gap-2 text-sm md:text-base">
+                                        <i class="ph ph-calculator"></i> PT Tenang Jaya Sejahtera, CV Sangtau Erte, CV Asy-Syifa
+                                    </p>
+                                </div>
+                                <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-textSecondary whitespace-nowrap self-start">
+                                    2018 – 2020
+                                </div>
+                            </div>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-accent/60 shrink-0"></div>
+                                    <span class="text-textSecondary text-sm md:text-base leading-relaxed">Managed high-volume financial data and automated invoicing workflows across three regional enterprises, consistently maintaining 99.5%+ accuracy and accelerating processing times by up to 40%.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-10 mt-auto border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-textSecondary text-sm">© 2026 Gunawan Busyaeri. Built with empathy and code.</p>
+            <div class="flex items-center gap-4 text-2xl text-textSecondary">
+                <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="https://github.com/gbusyaeri" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-github-logo"></i></a>
+                <a href="https://www.instagram.com/gbusyaeri/" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-instagram-logo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if(btn && menu && icon) {
+                btn.addEventListener('click', () => {
+                    const isOpen = menu.classList.contains('opacity-100');
+                    if (isOpen) {
+                        menu.classList.remove('opacity-100', 'pointer-events-auto');
+                        menu.classList.add('opacity-0', 'pointer-events-none');
+                        icon.classList.remove('ph-x');
+                        icon.classList.add('ph-list');
+                        document.body.style.overflow = '';
+                    } else {
+                        menu.classList.remove('opacity-0', 'pointer-events-none');
+                        menu.classList.add('opacity-100', 'pointer-events-auto');
+                        icon.classList.remove('ph-list');
+                        icon.classList.add('ph-x');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

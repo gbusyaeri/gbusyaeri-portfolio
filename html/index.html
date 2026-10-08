@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo-gb.ico">
+    <title>Gunawan Busyaeri - Portfolio | Home</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0B0B0D',
+                        surface: '#161618',
+                        textPrimary: '#F5F5F2',
+                        textSecondary: '#A6A6AA',
+                        accent: '#ED3B3B'
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.textPrimary');
+            font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        @keyframes custom-blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .animate-custom-blink {
+            animation: custom-blink 1s step-end infinite;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-textPrimary relative min-h-screen flex flex-col selection:bg-accent/30 selection:text-white">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl backdrop-blur-md bg-white/10 border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
+        <a href="index.html" class="flex items-center transition-transform hover:scale-105 duration-300">
+            <img src="assets/img/logo-gb.png" alt="GB Logo" class="h-8 w-auto rounded-sm">
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="text-textPrimary transition-colors duration-300">Home</a>
+            <a href="achievements.html"
+                class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Achievements</a>
+            <a href="projects.html"
+                class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Projects</a>
+            <a href="experiences.html"
+                class="text-textSecondary hover:text-textPrimary transition-colors duration-300">Experiences</a>
+            <a href="about.html" class="text-textSecondary hover:text-textPrimary transition-colors duration-300">About</a>
+        </div>
+
+        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+            class="bg-accent hover:bg-red-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors duration-300 shadow-md shadow-accent/20 hidden md:inline-flex">
+            Get In Touch
+        </a>
+    
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-textPrimary p-2 z-50 focus:outline-none">
+            <i class="ph ph-list text-2xl" id="menu-icon"></i>
+        </button>
+</nav>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center gap-6 text-lg font-medium transition-all duration-300 opacity-0 pointer-events-none z-40">
+
+            <a href="index.html" class="text-accent text-xl font-bold transition-colors block py-2 duration-300">Home</a>
+            <a href="achievements.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Achievements</a>
+            <a href="projects.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Projects</a>
+            <a href="experiences.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">Experiences</a>
+            <a href="about.html" class="text-textSecondary text-xl hover:text-textPrimary transition-colors block py-2 duration-300">About</a>
+        
+        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+            class="bg-accent hover:bg-red-600 text-white px-8 py-3 rounded-full text-base font-medium transition-colors duration-300 shadow-md shadow-accent/20 mt-4">
+            Get In Touch
+        </a>
+    </div>
+
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 md:pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full flex flex-col gap-24 lg:gap-32">
+
+        <!-- Hero Section -->
+        <section class="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-6xl mx-auto pt-8 md:pt-16">
+
+            <!-- Left Text Content -->
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left lg:w-3/5 gap-6">
+                <!-- Eyebrow -->
+                <p class="text-accent font-medium tracking-wide uppercase text-sm">
+                    Software Engineer and Game Developer
+                </p>
+
+                <!-- Headline -->
+                <h1
+                    class="text-5xl md:text-6xl lg:text-[4.5rem] font-bold font-outfit leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white to-white/70">
+                    Hi, I'm <br/>
+                    <span id="typewriter-text"></span><span class="animate-custom-blink">|</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg md:text-xl text-textSecondary font-poppins leading-relaxed max-w-lg">
+                    I build software that scales and experiences that teach.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-6 w-full">
+                    <a href="projects.html"
+                        class="w-full sm:w-auto text-center px-8 py-3.5 rounded-full bg-textPrimary text-background font-semibold hover:bg-white/90 transition-colors">
+                        See What I've Built
+                    </a>
+                    <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+                        class="w-full sm:w-auto text-center px-8 py-3.5 rounded-full bg-white/5 border border-white/10 text-textPrimary font-medium hover:bg-white/10 transition-colors">
+                        Let's Collaborate
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Profile Photo -->
+            <div class="lg:w-2/5 flex justify-center lg:justify-end w-full relative mt-12 lg:mt-0">
+                <!-- Glowing background blob -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-accent/30 to-red-600/30 blur-3xl rounded-full transform -translate-y-4">
+                </div>
+
+                <!-- Photo Card -->
+                <div
+                    class="relative w-full max-w-[340px] aspect-[4/5] rounded-[2.5rem] border border-white/10 overflow-hidden bg-surface shadow-2xl group">
+                    <img src="assets/img/profile.png"
+                        alt="Gunawan Busyaeri"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                    <!-- Bottom overlay gradient -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-90">
+                    </div>
+
+                    <!-- Floating Glassmorphism Nameplate -->
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div
+                            class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl p-4 flex items-center justify-between group-hover:bg-white/20 transition-colors duration-300">
+                            <div class="text-left">
+                                <p class="text-white font-bold font-outfit text-lg">Gunawan Busyaeri</p>
+                                <p class="text-white/70 text-xs mt-0.5">Software Engineer</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white">
+                                <i class="ph ph-sparkle text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Snapshot (Bento Grid) -->
+        <section class="flex flex-col gap-10">
+            <div class="flex items-center justify-between">
+                <h2 class="text-3xl md:text-4xl font-bold font-outfit">Impact Snapshot</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-surface rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col justify-center items-start gap-4 min-h-[180px] group">
+                    <div
+                        class="p-3 rounded-2xl bg-white/5 text-accent group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-300">
+                        <i class="ph ph-trophy text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-3xl font-bold font-outfit mb-1 group-hover:text-accent transition-colors duration-300">
+                            150+</h3>
+                        <p class="text-sm font-medium text-textPrimary mb-1">AI Apps in 8 Hours</p>
+                        <p class="text-xs text-textSecondary">Guinness World Record Participant</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-surface rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col justify-center items-start gap-4 min-h-[180px] group">
+                    <div
+                        class="p-3 rounded-2xl bg-white/5 text-accent group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-300">
+                        <i class="ph ph-eye text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-3xl font-bold font-outfit mb-1 group-hover:text-accent transition-colors duration-300">
+                            100,000+</h3>
+                        <p class="text-sm font-medium text-textPrimary mb-1">Visits</p>
+                        <p class="text-xs text-textSecondary">Virtual Communities & Metaverse</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-surface rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col justify-center items-start gap-4 min-h-[180px] group">
+                    <div
+                        class="p-3 rounded-2xl bg-white/5 text-accent group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-300">
+                        <i class="ph ph-users text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-3xl font-bold font-outfit mb-1 group-hover:text-accent transition-colors duration-300">
+                            500+</h3>
+                        <p class="text-sm font-medium text-textPrimary mb-1">Students</p>
+                        <p class="text-xs text-textSecondary">Vocational Tech Mentorship</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-surface rounded-3xl p-8 border border-white/5 hover:border-white/20 transition-all duration-300 flex flex-col justify-center items-start gap-4 min-h-[180px] group">
+                    <div
+                        class="p-3 rounded-2xl bg-white/5 text-accent group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-300">
+                        <i class="ph ph-trend-up text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-3xl font-bold font-outfit mb-1 group-hover:text-accent transition-colors duration-300">
+                            Top 10</h3>
+                        <p class="text-sm font-medium text-textPrimary mb-1">Seblak Cihuyy</p>
+                        <p class="text-xs text-textSecondary">Finalist Compfest 16</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Teaser -->
+        <section class="flex flex-col gap-10">
+            <div class="flex items-center justify-between">
+                <h2 class="text-3xl md:text-4xl font-bold font-outfit">Featured Projects</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <a href="projects.html" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/kangru.jpeg" alt="Kangru AI Career" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-briefcase text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Kangru (AI Career)</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">Career guidance and mentorship platform using AI.</p>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-medium text-accent mt-4 group-hover:translate-x-1 transition-transform duration-300">
+                            View Case Study <i class="ph ph-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://www.roblox.com/share?code=a42ca2e5b3e36d48b16a1b91db2dce1b&type=ExperienceDetails&stamp=1790562198126" target="_blank" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/kv.png" alt="Karawang Voice Map" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-map-pin text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Karawang Voice Map</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">Interactive audio map of local culture and stories.</p>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-medium text-accent mt-4 group-hover:translate-x-1 transition-transform duration-300">
+                            View Case Study <i class="ph ph-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="projects.html" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
+                    <div class="w-full h-48 md:h-56 overflow-hidden relative">
+                        <img src="assets/img/seblak.png" alt="Seblak Cihuyy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 flex items-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-md border border-accent/30 flex items-center justify-center text-accent">
+                                <i class="ph ph-fire text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col gap-3 flex-grow justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold font-outfit text-textPrimary group-hover:text-accent transition-colors duration-300">Seblak Cihuyy</h3>
+                            <p class="text-textSecondary text-sm leading-relaxed mt-2">A fast-paced time-management game challenging players to manage complex orders and extreme spice levels at a bustling Indonesian Seblak stall.</p>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-medium text-accent mt-4 group-hover:translate-x-1 transition-transform duration-300">
+                            View Case Study <i class="ph ph-arrow-right"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="flex justify-center mt-4">
+                <a href="projects.html"
+                    class="px-8 py-3.5 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all duration-300 text-sm font-medium flex items-center gap-2 group">
+                    View All Projects
+                    <i class="ph ph-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-10 mt-auto border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-textSecondary text-sm">© 2026 Gunawan Busyaeri. Built with empathy and code.</p>
+            <div class="flex items-center gap-4 text-2xl text-textSecondary">
+                <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-textPrimary transition-colors"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="https://github.com/gbusyaeri" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-github-logo"></i></a>
+                <a href="https://www.instagram.com/gbusyaeri/" target="_blank" rel="noopener noreferrer" class="hover:text-textPrimary transition-colors"><i class="ph ph-instagram-logo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if(btn && menu && icon) {
+                btn.addEventListener('click', () => {
+                    const isOpen = menu.classList.contains('opacity-100');
+                    if (isOpen) {
+                        menu.classList.remove('opacity-100', 'pointer-events-auto');
+                        menu.classList.add('opacity-0', 'pointer-events-none');
+                        icon.classList.remove('ph-x');
+                        icon.classList.add('ph-list');
+                        document.body.style.overflow = '';
+                    } else {
+                        menu.classList.remove('opacity-0', 'pointer-events-none');
+                        menu.classList.add('opacity-100', 'pointer-events-auto');
+                        icon.classList.remove('ph-list');
+                        icon.classList.add('ph-x');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }
+        });
+    </script>
+    <!-- Typewriter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nameToType = "Gunawan";
+            let i = 0;
+            let isDeleting = false;
+            const element = document.getElementById("typewriter-text");
+            
+            function typeWriter() {
+                if (!element) return;
+                
+                if (!isDeleting && i < nameToType.length) {
+                    element.innerHTML = nameToType.substring(0, i + 1);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                } else if (isDeleting && i > 0) {
+                    element.innerHTML = nameToType.substring(0, i - 1);
+                    i--;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    isDeleting = !isDeleting;
+                    setTimeout(typeWriter, isDeleting ? 3000 : 500);
+                }
+            }
+            
+            if (element) {
+                setTimeout(typeWriter, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>
