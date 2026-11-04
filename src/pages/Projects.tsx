@@ -10,6 +10,17 @@ const Projects = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {/* Project: Kahuruan */}
+                    <ProjectCard
+                        title="Kahuruan"
+                        description="Kahuruan is a fast-paced, mouse-click-based arcade game that tests players' dexterity and reflexes in preserving the forest ecosystem. Playing as a forest ranger, players must juggle two tasks: extinguishing randomly appearing fires and rescuing wildlife falling from the trees before time runs out."
+                        imageSrc="https://img.itch.zone/aW1hZ2UvNTI0NzUxMC8zMTQ2NDQyOS5wbmc=/347x500/3r41ds.png"
+                        iconClass="ph-tree"
+                        linkTo="https://gbusyaeri.itch.io/kahuruan"
+                        isExternal={true}
+                        linkText="Play on itch.io"
+                    />
+
                     {/* Project: Rusunawa */}
                     <ProjectCard
                         title="Rusunawa: Mimpi Edition"
