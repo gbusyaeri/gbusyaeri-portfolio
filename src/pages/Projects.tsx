@@ -41,12 +41,12 @@ const Projects = () => {
                         linkTo="#"
                         customLinks={
                             <>
-                                <a href="https://senior-robina-himarpl-f0a49bc9.koyeb.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300 hover:underline">
+                                <a href="https://karaventure.up.railway.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300 hover:underline">
                                     Karaventure Website <i className="ph ph-arrow-right"></i>
                                 </a>
-                                <div className="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300">
+                                <a href="https://www.roblox.com/games/106041739530903/Karaventure" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-accent group-hover:translate-x-1 transition-transform duration-300 hover:underline">
                                     Karaventure Roblox <i className="ph ph-arrow-right"></i>
-                                </div>
+                                </a>
                             </>
                         }
                     />
