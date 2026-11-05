@@ -41,8 +41,8 @@
 
     <style>
         body {
-            background-color: theme('colors.background');
-            color: theme('colors.textPrimary');
+            background-color: #0B0B0D;
+            color: #F5F5F2;
             font-family: 'Poppins', sans-serif;
             -webkit-font-smoothing: antialiased;
         }
@@ -95,11 +95,16 @@
         
         <!-- Projects Section -->
         <section class="flex flex-col gap-10">
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <h2 class="text-3xl md:text-4xl font-bold font-outfit">All Projects</h2>
+                <div class="relative w-full md:max-w-sm">
+                    <label for="project-search" class="sr-only">Search projects</label>
+                    <i class="ph ph-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-textSecondary"></i>
+                    <input id="project-search" type="search" placeholder="Search projects..." class="w-full rounded-full bg-surface border border-white/10 py-3 pl-11 pr-4 text-sm text-textPrimary placeholder:text-textSecondary focus:outline-none focus:border-accent">
+                </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project: AstraKala -->
                 <a href="https://pejuangdaring.itch.io/astrakala" target="_blank" rel="noopener noreferrer" class="group block bg-surface rounded-3xl overflow-hidden border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 shadow-lg">
                     <div class="w-full h-48 md:h-56 overflow-hidden relative">
@@ -337,6 +342,7 @@
                     </div>
                 </a>
             </div>
+            <p id="no-projects-found" class="hidden text-textSecondary text-center py-8" role="status">No projects found. Try a different search.</p>
         </section>
 
     </main>
@@ -377,6 +383,30 @@
                         icon.classList.add('ph-x');
                         document.body.style.overflow = 'hidden';
                     }
+                });
+            }
+
+            const projectSearch = document.getElementById('project-search');
+            const projectGrid = document.getElementById('project-grid');
+            const noProjectsFound = document.getElementById('no-projects-found');
+
+            if (projectSearch instanceof HTMLInputElement && projectGrid && noProjectsFound) {
+                const projectCards = Array.from(projectGrid.children).filter(
+                    (child) => child instanceof HTMLElement
+                );
+
+                projectSearch.addEventListener('input', () => {
+                    const query = projectSearch.value.trim().toLocaleLowerCase();
+                    let visibleCount = 0;
+
+                    projectCards.forEach((card) => {
+                        const searchableText = `${card.querySelector('h3')?.textContent ?? ''} ${card.querySelector('p')?.textContent ?? ''}`.toLocaleLowerCase();
+                        const matches = searchableText.includes(query);
+                        card.classList.toggle('hidden', !matches);
+                        if (matches) visibleCount += 1;
+                    });
+
+                    noProjectsFound.classList.toggle('hidden', visibleCount > 0);
                 });
             }
         });

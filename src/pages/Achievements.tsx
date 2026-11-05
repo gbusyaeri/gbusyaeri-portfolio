@@ -138,7 +138,7 @@ const Achievements = () => {
         <div>
             <h4 className="text-base font-bold font-outfit leading-snug">National Participant: The Ace UI/UX Competition</h4>
             <p className="text-textSecondary text-xs mt-2 leading-relaxed">Universitas Diponegoro (2024)<br />Competed among 200+ teams in full-cycle user-centered design challenges, including wireframing and usability testing.</p>
-            <button onClick={() => setModalImage('')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+            <button onClick={() => setModalImage('/assets/img/TheAce.jpeg')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
             <i className="ph ph-arrows-out-simple"></i> View Details
         </button>
     </div>
@@ -163,7 +163,7 @@ const Achievements = () => {
         <div>
             <h4 className="text-base font-bold font-outfit leading-snug">Semifinalist: Compassionate Gamification Challenge</h4>
             <p className="text-textSecondary text-xs mt-2 leading-relaxed">2025<br />Advancing among the top teams by designing empathy-driven gamified learning solutions for social impact education.</p>
-            <button onClick={() => setModalImage('')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+            <button onClick={() => setModalImage('/assets/img/Compass.png')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
             <i className="ph ph-arrows-out-simple"></i> View Details
         </button>
     </div>
@@ -187,9 +187,9 @@ const Achievements = () => {
                     <div>
                         <h4 className="text-base font-bold font-outfit leading-snug">5th & 6th Place (Project Lead & UX Designer): Falcon UI/UX Competition</h4>
                         <p className="text-textSecondary text-xs mt-2 leading-relaxed">Universitas Pelita Harapan (2024)<br />Directed the UX research and UI design for dual projects, 'Haloway' and 'Trabx'.</p>
-                        <button onClick={() => setModalImage('/assets/img/FalconUI.jpeg')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
-                            <i className="ph ph-arrows-out-simple"></i> View Details
-                        </button>
+                        <a href="/assets/img/UPH_PAGUN.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+                            <i className="ph ph-file-pdf"></i> View Details
+                        </a>
                     </div>
                 </div >
     <div className="bg-surface rounded-2xl p-5 border border-white/5 hover:border-white/20 transition-all duration-300 flex items-start gap-4">
@@ -365,9 +365,9 @@ const Achievements = () => {
                     <div>
                         <h4 className="text-base font-bold font-outfit leading-snug">Graduated with Great Praise from Latsar CPNS</h4>
                         <p className="text-textSecondary text-xs mt-2 leading-relaxed">BPSDM Pemerintah Provinsi Jawa Barat Nomor: 00039840/LATSAR CPNS III/6100/017/LAN-PEMPPROV JABAR/2021, 2022</p>
-                                            <button onClick={() => setModalImage('')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
-                            <i className="ph ph-arrows-out-simple"></i> View Details
-                        </button>
+                        <a href="/assets/img/Prajabatan.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+                            <i className="ph ph-file-pdf"></i> View Details
+                        </a>
                     </div>
                 </div>
 

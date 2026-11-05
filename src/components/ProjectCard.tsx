@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
     title: string;
     description: string;
     imageSrc: string;
