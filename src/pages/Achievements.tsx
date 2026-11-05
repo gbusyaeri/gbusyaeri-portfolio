@@ -37,19 +37,6 @@ const Achievements = () => {
 
                 <div className="bg-surface rounded-2xl p-5 border border-white/5 hover:border-white/20 transition-all duration-300 flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent shrink-0 border border-white/10 mt-1">
-                        <i className="ph ph-certificate text-2xl"></i>
-                    </div>
-                    <div>
-                        <h4 className="text-base font-bold font-outfit leading-snug">Full-stack Web Developer - Coding Camp 2026</h4>
-                        <p className="text-textSecondary text-xs mt-2 leading-relaxed">Dicoding Indonesia<br />Issued Feb 2026 · Expired Jun 2026<br />Credential ID: CC26/GRAD/XXVI-06/CFGG002D6Y0006</p>
-                        <a href="/assets/img/CodingCamp.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
-                            <i className="ph ph-file-pdf"></i> View Details
-                        </a>
-                    </div>
-                </div>
-
-                <div className="bg-surface rounded-2xl p-5 border border-white/5 hover:border-white/20 transition-all duration-300 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent shrink-0 border border-white/10 mt-1">
                         <i className="ph ph-medal text-2xl"></i>
                     </div>
                     <div>
@@ -200,7 +187,7 @@ const Achievements = () => {
                     <div>
                         <h4 className="text-base font-bold font-outfit leading-snug">5th & 6th Place (Project Lead & UX Designer): Falcon UI/UX Competition</h4>
                         <p className="text-textSecondary text-xs mt-2 leading-relaxed">Universitas Pelita Harapan (2024)<br />Directed the UX research and UI design for dual projects, 'Haloway' and 'Trabx'.</p>
-                        <button onClick={() => setModalImage('')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+                        <button onClick={() => setModalImage('/assets/img/FalconUI.jpeg')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
                             <i className="ph ph-arrows-out-simple"></i> View Details
                         </button>
                     </div>
@@ -348,15 +335,28 @@ const Achievements = () => {
                             <h3 className="text-2xl font-bold font-outfit mb-2">Certified Technical Educator</h3>
                             <p className="text-accent text-sm font-medium mb-3">Universitas Negeri Surabaya — Software and Game Development</p>
                             <p className="text-textSecondary leading-relaxed">Post-Graduate Teacher certification demonstrating proficiency in designing and delivering practical learning experiences.</p>
-                            <button onClick={() => setModalImage('assets/img/achievement_cert.jpg')} className="view-details-btn mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2.5 rounded-full text-sm font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
-                                <i className="ph ph-arrows-out-simple"></i> View Details
-                            </button>
+                            <a href="/assets/img/SERDIK_GUNAWAN%20BUSYAERI.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-5 py-2.5 rounded-full text-sm font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+                                <i className="ph ph-file-pdf"></i> View Details
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+
+                <div className="bg-surface rounded-2xl p-5 border border-white/5 hover:border-white/20 transition-all duration-300 flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent shrink-0 border border-white/10 mt-1">
+                        <i className="ph ph-certificate text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 className="text-base font-bold font-outfit leading-snug">Full-stack Web Developer - Coding Camp 2026</h4>
+                        <p className="text-textSecondary text-xs mt-2 leading-relaxed">Dicoding Indonesia<br />Issued Feb 2026 · Expired Jun 2026<br />Credential ID: CC26/GRAD/XXVI-06/CFGG002D6Y0006</p>
+                        <a href="/assets/img/CodingCamp.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+                            <i className="ph ph-file-pdf"></i> View Details
+                        </a>
+                    </div>
+                </div>
 
                 <div className="bg-surface rounded-2xl p-5 border border-white/5 hover:border-white/20 transition-all duration-300 flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent shrink-0 border border-white/10 mt-1">

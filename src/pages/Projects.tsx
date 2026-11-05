@@ -62,16 +62,6 @@ const Projects = () => {
                         }
                     />
 
-                    {/* Project: Semprong Ceria */}
-                    <ProjectCard
-                        title="Semprong Ceria"
-                        description="A heartwarming slice-of-life business simulator. Guide Asep, an ambitious high school graduate from a humble family, as he manages a roadside shop to achieve his dream of becoming a master semprong entrepreneur."
-                        imageSrc="/assets/img/semprong.png"
-                        iconClass="ph-storefront"
-                        linkTo="#"
-                        linkText="Explore Case"
-                    />
-
                     {/* Project: Seblak Cihuyy */}
                     <ProjectCard
                         title="Seblak Cihuyy"
@@ -91,16 +81,6 @@ const Projects = () => {
                         iconClass="ph-cards"
                         linkTo="https://www.roblox.com/games/90229198050659/Brewek"
                         isExternal={true}
-                        linkText="View Project"
-                    />
-
-                    {/* Project: Kangru (Akang Guru) */}
-                    <ProjectCard
-                        title="Kangru (Akang Guru)"
-                        description="An AI-powered career mapping application tailored to MBTI personality profiles. The platform empowers students and fresh graduates by aligning their unique psychological traits with optimized industry pathways and personalized mentorship."
-                        imageSrc="/assets/img/kangru.jpeg"
-                        iconClass="ph-briefcase"
-                        linkTo="#"
                         linkText="View Project"
                     />
 
@@ -129,6 +109,22 @@ const Projects = () => {
                         description="Inspired by titles like Coffee Talk, Sorai is a cozy visual novel that celebrates local Indonesian culture. Players step into the role of a traditional stall owner, conversing with patrons and influencing their personal storylines exclusively through the art of customizing and cooking the perfect surabi."
                         imageSrc="/assets/img/sorai.jpg"
                         iconClass="ph-coffee"
+                        linkTo="#"
+                        linkText="View Project"
+                    />
+                    <ProjectCard
+                        title="Semprong Ceria (In Development)"
+                        description="A heartwarming slice-of-life business simulator. Guide Asep, an ambitious high school graduate from a humble family, as he manages a roadside shop to achieve his dream of becoming a master semprong entrepreneur."
+                        imageSrc="/assets/img/semprong.png"
+                        iconClass="ph-storefront"
+                        linkTo="#"
+                        linkText="View Project"
+                    />
+                    <ProjectCard
+                        title="Kangru (Akang Guru) - Under Maintenance"
+                        description="An AI-powered career mapping application tailored to MBTI personality profiles. The platform empowers students and fresh graduates by aligning their unique psychological traits with optimized industry pathways and personalized mentorship."
+                        imageSrc="/assets/img/kangru.jpeg"
+                        iconClass="ph-briefcase"
                         linkTo="#"
                         linkText="View Project"
                     />
