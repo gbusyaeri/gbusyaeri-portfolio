@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 const Layout = () => {
     return (
-        <div className="bg-background text-textPrimary relative min-h-screen flex flex-col selection:bg-accent/30 selection:text-white">
+        <div className="text-textPrimary relative min-h-screen flex flex-col selection:bg-accent/30 selection:text-white">
             <Navbar />
             <Outlet />
             <Footer />

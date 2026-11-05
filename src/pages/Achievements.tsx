@@ -37,6 +37,19 @@ const Achievements = () => {
 
                 <div className="bg-surface rounded-2xl p-5 border border-white/5 hover:border-white/20 transition-all duration-300 flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent shrink-0 border border-white/10 mt-1">
+                        <i className="ph ph-certificate text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 className="text-base font-bold font-outfit leading-snug">Full-stack Web Developer - Coding Camp 2026</h4>
+                        <p className="text-textSecondary text-xs mt-2 leading-relaxed">Dicoding Indonesia<br />Issued Feb 2026 · Expired Jun 2026<br />Credential ID: CC26/GRAD/XXVI-06/CFGG002D6Y0006</p>
+                        <a href="/assets/img/CodingCamp.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-medium transition-colors w-max flex items-center gap-2 text-textPrimary hover:text-accent group-hover:border-white/20">
+                            <i className="ph ph-file-pdf"></i> View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div className="bg-surface rounded-2xl p-5 border border-white/5 hover:border-white/20 transition-all duration-300 flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-accent shrink-0 border border-white/10 mt-1">
                         <i className="ph ph-medal text-2xl"></i>
                     </div>
                     <div>
