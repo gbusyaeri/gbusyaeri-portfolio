@@ -10,6 +10,17 @@ const Projects = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {/* Project: AstraKala */}
+                    <ProjectCard
+                        title="Astrakala"
+                        description="Astrakala is a story-based game that tells the story of a schoolboy who finds something odd at his school. What did he find? Let's continue the journey with us."
+                        imageSrc="https://img.itch.zone/aW1nLzg0MDgzNjcucG5n/original/ZalTpz.png"
+                        iconClass="ph-game-controller"
+                        linkTo="https://pejuangdaring.itch.io/astrakala"
+                        isExternal={true}
+                        linkText="Play on itch.io"
+                    />
+
                     {/* Project: Kahuruan */}
                     <ProjectCard
                         title="Kahuruan"
@@ -61,16 +72,6 @@ const Projects = () => {
                         linkText="Explore Case"
                     />
 
-                    {/* Project: Leumpang */}
-                    <ProjectCard
-                        title="Leumpang (In Development)"
-                        description="An innovative Roblox experience recreating Karawang's Singaperbangsa Stadium. This ongoing project bridges physical fitness and the metaverse by seamlessly integrating real-world sports tracking with virtual gameplay."
-                        imageSrc="/assets/img/leumpang.jpeg"
-                        iconClass="ph-sneaker"
-                        linkTo="#"
-                        linkText="View Project"
-                    />
-
                     {/* Project: Seblak Cihuyy */}
                     <ProjectCard
                         title="Seblak Cihuyy"
@@ -79,16 +80,6 @@ const Projects = () => {
                         iconClass="ph-fire"
                         linkTo="#"
                         linkText="Explore Case"
-                    />
-
-                    {/* Project: Sorai */}
-                    <ProjectCard
-                        title="Sorai (In Development)"
-                        description="Inspired by titles like Coffee Talk, Sorai is a cozy visual novel that celebrates local Indonesian culture. Players step into the role of a traditional stall owner, conversing with patrons and influencing their personal storylines exclusively through the art of customizing and cooking the perfect surabi."
-                        imageSrc="/assets/img/sorai.jpg"
-                        iconClass="ph-coffee"
-                        linkTo="#"
-                        linkText="View Project"
                     />
 
                     {/* Project: Brewek */}
@@ -120,6 +111,24 @@ const Projects = () => {
                         iconClass="ph-map-pin"
                         linkTo="https://www.roblox.com/share?code=a42ca2e5b3e36d48b16a1b91db2dce1b&type=ExperienceDetails&stamp=1790562198126"
                         isExternal={true}
+                        linkText="View Project"
+                    />
+
+                    {/* Projects in development */}
+                    <ProjectCard
+                        title="Leumpang (In Development)"
+                        description="An innovative Roblox experience recreating Karawang's Singaperbangsa Stadium. This ongoing project bridges physical fitness and the metaverse by seamlessly integrating real-world sports tracking with virtual gameplay."
+                        imageSrc="/assets/img/leumpang.jpeg"
+                        iconClass="ph-sneaker"
+                        linkTo="#"
+                        linkText="View Project"
+                    />
+                    <ProjectCard
+                        title="Sorai (In Development)"
+                        description="Inspired by titles like Coffee Talk, Sorai is a cozy visual novel that celebrates local Indonesian culture. Players step into the role of a traditional stall owner, conversing with patrons and influencing their personal storylines exclusively through the art of customizing and cooking the perfect surabi."
+                        imageSrc="/assets/img/sorai.jpg"
+                        iconClass="ph-coffee"
+                        linkTo="#"
                         linkText="View Project"
                     />
                 </div>
