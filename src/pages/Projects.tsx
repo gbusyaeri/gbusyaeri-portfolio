@@ -78,8 +78,9 @@ const Projects = () => {
                         description="A fast-paced time-management game celebrating Indonesian street food culture. Players are challenged to run a bustling Seblak stall, mastering complex customer orders and extreme spice levels under pressure."
                         imageSrc="/assets/img/seblak.png"
                         iconClass="ph-fire"
-                        linkTo="#"
-                        linkText="Explore Case"
+                        linkTo="https://karavan-studios.itch.io/seblak-cihuyy"
+                        isExternal={true}
+                        linkText="Play on itch.io"
                     />
 
                     {/* Project: Brewek */}
