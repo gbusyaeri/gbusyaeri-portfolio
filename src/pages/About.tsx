@@ -19,10 +19,18 @@ const About = () => {
                         high-performance applications like Seblak Cihuyy. I enjoy tackling complex engineering problems and
                         delivering straightforward, usable tools.
                     </p>
-                    <div className="mt-4">
-                        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+                    <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-3">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gbusyaeri.edu@gmail.com" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/20 transition-all text-sm font-medium">
                             Let's Talk <i className="ph ph-envelope-simple"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gunawan-busyaeri/" target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/20 transition-all text-sm font-medium">
+                            LinkedIn <i className="ph ph-linkedin-logo"></i>
+                        </a>
+                        <a href="https://www.instagram.com/gbusyaeri/" target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/20 transition-all text-sm font-medium">
+                            Instagram <i className="ph ph-instagram-logo"></i>
                         </a>
                     </div>
                 </div>
